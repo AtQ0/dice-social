@@ -19,15 +19,20 @@ diceSocial is an interactive web application where users can roll dice against e
 /*=================*/
 
 1) Download project
-2) cd dice-social
-3) np
-1) open two terminals (one for backend/frontend)
-2) cd backend
-3) nodemon app.js
-4) cd ..
-5) cd frontend
-6) npm run dev
-7) visit http://localhost:3001/ in your browser
+2) open terminal (Git Bash) in project root folder (dice-social)
+4) cd backend
+5) npm install
+6) cd ..
+7) cd frontend
+8) npm install
+9) cd ..
+10) open two terminals (one for backend/frontend)
+11) cd backend
+12) nodemon app.js
+13) cd ..
+14) cd frontend
+15) npm run dev
+16) visit http://localhost:3001/ in your browser
 
 
 /*===========================================*/
