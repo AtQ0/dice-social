@@ -1,0 +1,141 @@
+.main {
+    background-color: pink;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    margin: 20px 20px;
+    padding: 10px;
+}
+
+.greeting {
+    background-color: yellowgreen;
+    /* margin-left: 20px; */
+    width: fit-content;
+}
+
+
+.game-container {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+}
+
+.user-stats-container {
+    background-color: orange;
+}
+
+.user-stats-container h4 {
+    margin: 0;
+}
+
+.user-stats-wrapper {
+    background-color: yellow;
+    width: 100%;
+    height: 80px;
+    border: 1 solid black;
+    border-radius: 8px;
+    overflow-y: scroll;
+}
+
+.user-stats-wrapper ul {
+    margin: 0;
+    list-style: none;
+    padding: 5px;
+}
+
+.user-stats-wrapper li {
+    background-color: white;
+    margin: 5px 0px;
+}
+
+.dice-game-container {
+    background-color: coral;
+    flex-grow: 1;
+}
+
+
+.dice-game-container h4 {
+    margin: 0;
+}
+
+
+.dice-game-wrapper {
+    background-color: gray;
+    margin: 20px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.dice-game {
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+
+}
+
+.roll-dice-btn {
+    cursor: pointer;
+}
+
+.chat-container {
+    background-color: azure;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-container h4 {
+    margin: 0;
+}
+
+
+.chat-wrapper {
+    background-color: yellow;
+    height: 130px;
+    border: 1px solid black;
+    border-radius: 8px;
+    overflow-y: scroll;
+}
+
+.chat-wrapper ul {
+    margin: 0px;
+    padding: 8px;
+    background-color: orange;
+}
+
+.chat-wrapper li {
+    list-style: none;
+    margin: 2px;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+.chat-input-wrapper {
+    background-color: orange;
+    padding: 5px;
+}
+
+.chat-form {
+    background-color: red;
+}
+
+
+.chat-form input {
+    width: 80%;
+    max-width: 450px;
+    margin-right: 10px;
+    border-radius: 5px;
+}

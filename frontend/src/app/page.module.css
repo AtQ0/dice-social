@@ -1,0 +1,53 @@
+.main {
+    background-color: lightblue;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 40px;
+}
+
+
+.login-container {
+    background-color: red;
+    width: 60%;
+    max-width: 250px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.login-container h4 {
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+
+.name-tbx {
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+}
+
+.name-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.name-btn {
+    width: 55px;
+    cursor: pointer;
+}

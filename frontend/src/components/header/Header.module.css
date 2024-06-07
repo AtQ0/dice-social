@@ -1,0 +1,17 @@
+.header {
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+}
+
+
+.header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.link-in-nav {
+    background-color: yellow;
+    text-decoration: none;
+    color: inherit;
+}
