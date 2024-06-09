@@ -4,11 +4,20 @@
     justify-content: center;
 }
 
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    width: 100%;
 
-.header h1 {
+}
+
+.navbar h1 {
     margin: 0;
     font-size: 42px;
 }
+
+
 
 .link-in-nav {
     background-color: yellow;

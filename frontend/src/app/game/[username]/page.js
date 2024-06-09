@@ -8,6 +8,8 @@ import { Formik, Form, Field } from 'formik';
 export default function Game() {
     const params = useParams();
     const { username } = params;
+    const [lastDiceRollPlayer, setLastDiceRollPlayer] = useState("");
+    const [lastDiceResult, setLastDiceResult] = useState("");
     const [diceRolls, setDiceRolls] = useState([]);
     const [messages, setMessages] = useState([]);
     const [users, setUsers] = useState([]); // State to store user stats
@@ -43,6 +45,7 @@ export default function Game() {
         };
     }, []);
 
+
     useEffect(() => {
         // Only post the user once
         if (!hasPostedUser.current) {
@@ -74,26 +77,40 @@ export default function Game() {
                     console.error('Error posting new user:', error);
                 });
         }
-    }, [username]); // Add username as a dependency to ensure it only runs when username changes
+    }, [username]); // username as a dependency to ensure it only runs when username changes
+
+
+    /*======================*/
+    /*==== DICE ROLLS ======*/
+    /*======================*/
 
     function handleDiceBtn() {
+
+        // Generate a random dice throw
         const diceThrow = Math.floor(Math.random() * 6) + 1;
+
+        // Save dice throw result
+        setLastDiceRollPlayer(username);
+        setLastDiceResult(diceThrow);
+
         // Post dice roll to DB (not implemented)
         // Update user stats after rolling dice
-        fetchUserStats();
+        fetchDiceRollStats();
     }
 
-    // Function to fetch updated user stats
-    function fetchUserStats() {
-        fetch('https://www.atkobabic.com/api/dice/diceplayers/')
+
+    // Function to fetch latest dice roll stats from DB
+    function fetchDiceRollStats() {
+        fetch('https://www.atkobabic.com/api/dice/dicerolls/')
             .then(response => response.json())
             .then(data => {
-                setUsers(data);
+                setDiceRolls(data);
             })
             .catch(error => {
                 console.error('Error fetching user stats:', error);
             });
     }
+
 
     return (
         <main className={styles.main}>
@@ -113,7 +130,7 @@ export default function Game() {
                     <h4>Game</h4>
                     <div className={styles['dice-game-wrapper']}>
                         <div className={styles['dice-game']}>
-                            <h2>6</h2>
+                            {lastDiceResult ? <h2>{lastDiceResult}</h2> : <h1>#</h1>}
                         </div>
                         <button className={styles['roll-dice-btn']} onClick={handleDiceBtn}>Roll dice</button>
                     </div>
@@ -159,6 +176,7 @@ export default function Game() {
                     </div>
                 </div>
             </div>
+
         </main>
     );
 }

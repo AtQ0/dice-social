@@ -1,7 +1,7 @@
-
 import "./globals.css";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
+import { MyContextProvider } from "./context/MyContextProvider";
 
 export const metadata = {
   title: "Create Next App",
@@ -9,12 +9,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
-      <body >
-        <Header />
-        {children}
-        <Footer />
+      <body>
+        <MyContextProvider>
+          <Header />
+          {children}
+          <Footer />
+        </MyContextProvider>
       </body>
     </html>
   );
