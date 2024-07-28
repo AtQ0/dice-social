@@ -11,12 +11,17 @@
   "dependencies": {
     "formik": "^2.4.6",
     "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "socket.io-client": "^4.7.5"
   },
   "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "@babel/core": "^7.24.9",
+    "@babel/plugin-transform-runtime": "^7.24.7",
+    "@babel/preset-env": "^7.25.0",
+    "@babel/preset-react": "^7.24.7",
+    "callsites": "^4.2.0",
+    "eslint": "^8.40.0",
+    "eslint-config-next": "^14.2.5"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "name": "dice-social",
+  "version": "1.0.0",
+  "description": "/*=================*/\r /*== DICE SOCIAL ==*/\r /*=================*/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npm run lint:frontend && npm run lint:backend",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:backend": "cd backend && npm run lint"
+  },
+  "author": "",
+  "license": "ISC"
+}
